@@ -3,10 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'sudo su -'
-                sh 'npm install @getgauge/cli'
-                sh 'npm install'
-                sh 'gauge run specs'
+                sh 'su - npm install @getgauge/cli'
+                sh 'su - npm install'
+                sh 'su - gauge run specs'
             }
         }
     }
